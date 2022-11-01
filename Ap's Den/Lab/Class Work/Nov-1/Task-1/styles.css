@@ -1,0 +1,13 @@
+body {
+    height: 100%;
+}
+
+h1 {
+    color: red;
+}
+
+.outer-container {
+    border: 1px solid black;
+    width: 50%;
+    align-items: ce;
+}

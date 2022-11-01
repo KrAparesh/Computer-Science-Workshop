@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nov-1 | Task - 1</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            $(".btn1").click(() => {
+                $(".test").toggle("fast","linear");
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>This is just a random paragraph</p>
+    <p class="test">This is some really long paragraph and takes up a lot of space, and I am running out of words hence I will be using the lorem stuff VS code provides, here we go. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas omnis ea aut iure libero natus, accusamus eos distinctio consequatur vel quam accusantium mollitia autem officiis quos, nulla temporibus perspiciatis dolorum!</p>    
+    <button class="btn1">Click me!</button>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nov-1 | Task-3</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            $(".Hide").click(() => $("h1").hide("slow", "linear"));
+            $(".Show").click(() => $("h1").show("slow", "linear"));
+        });
+    </script>
+</head>
+<body>
+    <h1>Hi! This is me!</h1>
+    <button class="Hide">Hide!</button>
+    <button class="Show">Show!</button>
+</body>
+</html>
