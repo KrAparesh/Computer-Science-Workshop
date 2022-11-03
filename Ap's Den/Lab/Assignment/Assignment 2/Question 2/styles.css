@@ -1,0 +1,40 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-outer {
+    border: 2px solid black;
+    width: clamp(400px, 25%,40%);
+    height: 75%;
+}
+
+.card-header {
+    border: 2px solid red;
+    height: 20%;
+    padding: 10px;
+    background-color: #B3FFAE;
+}
+
+.card-header img {
+    float: right;
+}
+
+.card-header h1 {
+    margin-top: 1px;
+    display: inline-block;
+    font-family: 'Ubuntu';
+}
+
+.card-header p {
+    font-family: 'Ubuntu';
+    margin: 0px 0px;
+}
+.card-body {
+    border: 2px solid blue;
+    height: 60%;
+    background-color: #F8FFDB;
+}
