@@ -1,40 +1,34 @@
-html, body {
+body, html {
     height: 100%;
     width: 100%;
+}
+
+.heading-cell {
+    font-weight: bold;
+    margin: -1px;
+}
+
+.table-heading {
+    border: 1px solid black;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
+    width: fit-content;
 }
 
-.card-outer {
-    border: 2px solid black;
-    width: clamp(400px, 25%,40%);
-    height: 75%;
+.table-body {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
 }
 
-.card-header {
-    border: 2px solid red;
-    height: 20%;
+.body-row {
+    width: fit-content;
+    border: 1px solid blue;
+    display: flex;
+}
+
+.heading-cell, .body-row-cell {
+    min-width: 100px;
     padding: 10px;
-    background-color: #B3FFAE;
-}
-
-.card-header img {
-    float: right;
-}
-
-.card-header h1 {
-    margin-top: 1px;
-    display: inline-block;
-    font-family: 'Ubuntu';
-}
-
-.card-header p {
-    font-family: 'Ubuntu';
-    margin: 0px 0px;
-}
-.card-body {
-    border: 2px solid blue;
-    height: 60%;
-    background-color: #F8FFDB;
 }
