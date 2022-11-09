@@ -1,0 +1,117 @@
+<html>
+
+<head>
+    <title>Q10</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        font-family: Verdana, Verdana, Geneva, Tahoma, sans-serif;
+        margin: 15px 30px;
+        font-size: 17px;
+        padding: 8px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"] {
+        width: 180px;
+        padding: 5px;
+        border: 2px solid blue;
+        border-radius: 2px;
+    }
+
+    input[type="radio"] {
+        margin-right: 5px;
+    }
+
+    form {
+        text-align: center;
+        background-color: rgb(237, 241, 241);
+        border-radius: 8px;
+        padding: 20px;
+        width: 400px;
+    }
+
+    input[type="submit"] {
+        background-color: #4daca1;
+        color: white;
+        padding: 12px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        text-align: center;
+        width: 100%;
+    }
+
+    .container>div {
+        width: 100%;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    select {
+        width: 180px;
+        padding: 5px;
+        border: 2px solid blue;
+        border-radius: 2px;
+    }
+
+    .gender {
+        display: flex;
+        justify-content: space-between;
+        width: 180px;
+    }
+</style>
+
+<body>
+    <form action="" method="get">
+        <div class="container">
+            <img src="https://images.squarespace-cdn.com/content/v1/57713a8e2994cae381dd86fe/1510405002757-FP2W9HV8ZA0HP2IF3O6A/SOA-PNG.png"
+                width="100" height="100" /><br /><br />
+            <h4>Registration</h4>
+            <br />
+            <div>
+                <label>UserName:</label><input type="text" name="username" placeholder="Enter name" required />
+            </div>
+            <div>
+                <label>Email:</label><input type="email" name="email" placeholder="Enter email" required />
+            </div>
+            <div>
+                <label>Mobile:</label><input type="number" name="mobile" placeholder="Enter mobile" required />
+            </div>
+            <div>
+                <label>Gender:</label>
+                <div class="gender">
+                    <div><input type="radio" name="gender" required />Female</div>
+                    <div><input type="radio" name="gender" required />Male</div>
+                </div>
+            </div>
+            <div>
+                <label>City:</label>
+                <select value="city">
+                    <option value="" disabled selected Qhidden>--Select city--</option>
+                    <option value="Bhubaneswar">Bhubaneswar</option>
+                    <option value="Rourkela">Rourkela</option>
+                    <option value="Balasore">Balasore</option>
+                    <option value="Cuttak">Cuttak</option>
+                    <option value="Bhadrak">Bhadrak</option>
+                </select>
+            </div>
+            <div>
+                <label>Password:</label><input type="text" name="password" placeholder="password" required />
+            </div>
+        </div>
+        <div><input type="submit" value="Sign Up" /></div>
+    </form>
+</body>
+
+</html>
