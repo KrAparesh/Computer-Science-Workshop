@@ -1,47 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Montserrat:wght@900&family=Ubuntu:ital@0;1&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <title>Sample Form</title>
+    <title>Subscribe</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            background: #fef8f8;
+        }
+
+        .container {
+            margin: 50px auto;
+            width: 44%;
+            padding-bottom: 1px;
+            background: white;
+            border-radius: 20px;
+            -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.44);
+            box-shadow: 2px 4px 10px 1px rgba(200, 200, 200, 0.44);
+        }
+
+        h1 {
+            text-align: center;
+            color: #5e6f78;
+            font-weight: normal;
+            background: #eef2f4;
+            border-radius: 20px 20px 0 0;
+            padding: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        form {
+            margin: 50px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 22px;
+        }
+
+        input, select {
+            font-size: 18px;
+            width: 50%;
+            border: 1px solid lightgray;
+            border-radius: 3px;
+            padding: 5px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        input[type="radio"] {
+            cursor: pointer;
+        }
+
+        .container div {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+
+        .submitReset {
+            margin-top: 50px;
+        }
+
+        .submitReset input {
+            cursor: pointer;
+            padding: 10px 30px;
+            width: 40%;
+            border: none;
+            background-color: lightskyblue;
+            border-radius: 7px;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Sample Form</h1>
-    <div class="outer-card">
-        <form>
-            <div class="details">
-                <div class="name">
-                    YOUR NAME <br>
-                    <input type="text" class="inp" placeholder="Aparesh">
-                </div>
-                <div class="mail">
-                    E-MAIL ADDRESS <br>
-                    <input type="email" class="inp" placeholder="xyz@gmail.com">
-                </div>
-                <div class="profession">
-                    PROFESSION <br>
-                    <select name="profession-select">
-                        <option>Student</option>
-                        <option>Teacher</option>
-                        <option>Developer</option>
-                    </select>
-                </div>
-                <div class="message">
-                    MESSAGE <br>
-                    <textarea id="message" class="inp" name="message"
-                        placeholder="Please enter your comments..."></textarea>
-                </div>
-                <button type="submit">Submit</button>
+    <div class="container">
+
+        <h1>Subscribe &nbsp;Page</h1>
+        <form action="">
+            <div>
+                <label for="name">Name: </label>
+                <input type="text">
+            </div>
+            <div>
+                <label for="contact">Contact No: </label>
+                <input type="number">
+            </div>
+            <div>
+                <label for="email">Email: </label>
+                <input type="text">
+            </div>
+            <div>
+                <label for="email">City: </label>
+                <select value="city">
+                    <option value="">--Select a city--</option>
+                    <option value="bhubaneswar">Bhubaneswar</option>
+                    <option value="ranchi">Ranchi</option>
+                    <option value="chandigarh">Chandigarh</option>
+                    <option value="other">Other</option>
+
+                </select>
+            </div>
+            <div>
+                <label for="email">Subscribe: </label>
+                <span>
+                    <input type="radio" name="ch" id="">&nbsp;Yes
+                </span>
+                <span>
+                    <input type="radio" name="ch" id="">&nbsp;No
+                </span>
+            </div>
+            <div class="submitReset">
+                <input type="submit">
+                <input type="reset">
             </div>
         </form>
-        <div>
+    </div>
 </body>
 
 </html>
