@@ -1,0 +1,66 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Ubuntu;
+}
+
+.header {
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #252A34;
+}
+
+.header h1 {
+    font-family: Ubuntu;
+    font-size: 70px;
+    color: #F6F6F6;
+}
+
+.body-div {
+    height: 80%;
+    background-color: #393E46;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.body-div h1{
+    color: #F6F6F6;
+}
+
+.inp-bar {
+    height: 50%;
+}
+
+.name-inp {
+    width: 160px;
+    height: 30px;
+    background-color: #F6F6F6;
+    border-radius: 12px;
+    border: none;
+    text-align: center;
+    margin: 12px 7px;
+}
+
+.btn-submit {
+    width: 50px;
+    height: 30px;
+    border-radius: 12px;
+    border: none;
+    background-color: #08D9D6;
+}
+
+.btn-submit:hover{
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 0 rgba(100, 100, 100, 0.568);
+}
+
+.name-inp:hover {
+    box-shadow: 2px 2px 2px 0 rgba(100, 100, 100, 0.568)
+}
+
+
