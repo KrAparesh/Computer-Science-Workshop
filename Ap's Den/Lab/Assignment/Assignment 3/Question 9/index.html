@@ -1,35 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Ubuntu&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Ubuntu&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Assignment 3 | Question 9</title>
 
     <script>
         $(document).ready(() => {
-            $(".btn-submit").click(() => {
-                if(!$(".name-inp").val().length == 0){
+            if (document.cookie.length == 0) {
+                $("#btn-submit").click(() => {
                     var name = $(".name-inp").val();
-                }
-            })
-        })
+                    document.cookie = "rockmaina_username=" + name + ";";
+                    console.log("Cookie saved " + document.cookie);
+                    location.reload(true);
+                });
+            } else {
+                console.log(document.cookie);
+                $(".inp-bar").css({ display: "none" });
+                $(".body-div h1").text("Hi " + getCookie("rockmaina_username") + "!");
+                $("#btn-begin").removeClass("dp_none");
+            }
+        });
 
+        function getCookie(cname) {
+            let name = cname + "=";
+            let decodedCookie = decodeURIComponent(document.cookie);
+            let ca = decodedCookie.split(";");
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == " ") {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
     </script>
 </head>
+
 <body>
     <div class="header">
         <h1>Rock-Mania</h1>
     </div>
-    <div class="body-div">
+    <div class="body-div landing-page">
         <h1>Hi!</h1>
         <div class="inp-bar">
-            <input class="name-inp" type="text" placeholder="Enter your name">
-            <button class="btn-submit" type="submit">Go</button>
+            <input class="name-inp" type="text" placeholder="Enter your name" />
+            <button id="btn-submit" class="btn" type="submit">Go</button>
+        </div>
+        <div class="begin-div">
+            <button id="btn-begin" class="btn dp_none">Begin</button>
+        </div>
+    </div>
+    <div class="game-body-div dp_none">
+        <div class="name-header-div">
+            <div class="user-div">
+                <h1>Aparesh</h1>
+                <img src="./user_profile.png" alt="" style="width: 90px" />
+            </div>
+            <div class="vs">
+                <h2>vS</h2>
+            </div>
+            <div class="rooster-div">
+                <h1>Rooster</h1>
+                <img src="./Rooster.jpg" alt="" style="width: 90px; border-radius: 100%" />
+            </div>
+        </div>
+
+        <div class="score-div-container">
+            <div class="score-div">
+                <table>
+                    <thead>
+                        <th>Scores</th>
+                        <th>Current</th>
+                        <th>Highest</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Aparesh</td>
+                            <td>8</td>
+                            <td>16</td>
+                        </tr>
+                        <tr>
+                            <td>Rooster</td>
+                            <td>9</td>
+                            <td>12</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </body>
+
 </html>
