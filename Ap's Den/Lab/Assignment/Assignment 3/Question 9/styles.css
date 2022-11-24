@@ -66,6 +66,7 @@ body, html {
 .btn:hover{
     cursor: pointer;
     box-shadow: 2px 2px 2px 0 rgba(100, 100, 100, 0.568);
+    opacity: 100%;
 }
 
 .name-inp:hover {
@@ -97,6 +98,21 @@ body, html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.roll-btn-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+}
+
+.btn-roll {
+    width: 100px;
+    height: 50px;
+    font-size: 1.1em;
+    color: #F6F6F6;
+    opacity: 80%;
 }
 
 .score-div-container {
