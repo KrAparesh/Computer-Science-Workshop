@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nov-1 | Task-2</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            $(".h1h").click(() => {
+                $(".p1").toggle("fast","linear");
+            });
+
+            $(".h2h").dblclick(() => {
+                $(".p2").toggle("fast","linear");
+            });
+
+            $(".h3h").mouseenter(() => {
+                $(".p3").toggle("fast","linear");
+            });
+            
+        });
+    </script>
+</head>
+<body>
+    <h1 class="h1h">This is the first heading (Click me!)</h1>
+    <p class="p1">And this is the first para</p>
+
+    
+    <h2 class="h2h">This is the second heading (Double click me!)</h2>
+    <p class="p2">And this is the second para</p>
+
+    <h2 class="h3h">This is the third heading (hover on me)</h2>
+    <p class="p3">And this is the third para</p>
+
+</body>
+</html>

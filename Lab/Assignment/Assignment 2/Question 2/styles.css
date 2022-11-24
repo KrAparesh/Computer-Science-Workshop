@@ -1,0 +1,34 @@
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+.heading-cell {
+    font-weight: bold;
+    margin: -1px;
+}
+
+.table-heading {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+}
+
+.table-body {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.body-row {
+    width: fit-content;
+    border: 1px solid blue;
+    display: flex;
+}
+
+.heading-cell, .body-row-cell {
+    min-width: 100px;
+    padding: 10px;
+}

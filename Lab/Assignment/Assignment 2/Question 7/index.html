@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Assignment 2 | Question 7</title>
+
+    <style>
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            background-image: linear-gradient(to right, #8360c3, #2ebf91);
+        }
+
+        .selection {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .selection h2 {
+            padding-right: 20px;
+            font-family: sans-serif;
+            color: whitesmoke;
+        }
+
+        select {
+            width: fit-content;
+            height: 30px;
+            font-family: sans-serif;
+            color: whitesmoke;
+            background-color: rgba(0, 0, 0, 0.401);
+
+        }
+
+        .form-element {
+            font-family: sans-serif;
+            background-color: aliceblue;
+            color: #333;
+        }
+
+        .form-element:nth-of-type(odd) {
+            background-color: rgba(0, 0, 0, 0.401);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="selection">
+        <h2>Select your state:</h2>
+        <select name="state" id="state-select">
+            <option class="form-element" value="City1">BHUBANESWAR</option>
+            <option class="form-element" value="City2">DELHI</option>
+            <option class="form-element" value="City3">BANGALORE</option>
+            <option class="form-element" value="City4">MUMBAI</option>
+        </select>
+    </div>
+</body>
+
+</html>

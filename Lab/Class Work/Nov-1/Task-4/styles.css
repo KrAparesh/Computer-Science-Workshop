@@ -1,0 +1,39 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    margin: 30px;
+}
+
+p {
+    justify-content: center;
+    align-items: center;
+}
+
+.a {
+    width: 25%;
+    height: 25%;
+    border: 1px solid black;
+    background-color: #FDFDBD;
+}
+
+.b {
+    width: 25%;
+    height: 25%;
+    border: 1px solid black;
+    background-color: #C8FFD4;
+    flex-direction: row;
+}
+
+.c {
+    width: 25%;
+    height: 25%;
+    border: 1px solid black;
+    background-color: #B8E8FC;
+}

@@ -1,0 +1,24 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(195, 252, 252, 0.868);
+}
+
+.bg-div {
+    width: 50%;
+    height: 50%;
+    border-radius: 25px;
+    box-shadow: 2px 4px 10px 1px rgba(200, 200, 200, 0.44);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("PokeBall.png");
+    padding: 20px;
+}
+
+.bg-div:hover {
+    background-image: url("Pika.png");
+}

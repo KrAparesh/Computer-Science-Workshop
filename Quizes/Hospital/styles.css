@@ -1,0 +1,82 @@
+body {
+    margin: 0px;
+    padding: 0px;
+  }
+
+.logo-header {
+          background-color: #C8FFD4;
+          display: flex;
+          border-radius: 0 25px 25px 0;
+          padding: 10px 20px 10px 5;
+  }
+  
+.homepage {
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #B8E8FC;
+  }
+  
+.homepage img {
+    border-radius: 50%;
+  }
+
+.homepage .logo-name {
+          padding: 15px;
+  }
+  
+.nav li{
+          list-style: none;
+          float: left;
+          padding: 20px;
+          border: 2px solid black;
+          border-radius: 10px;
+}
+
+  .nav {
+       padding-left: 32vw;
+  }
+
+  a:link {
+          text-decoration: none;
+          color: black;
+  }
+
+  a:visited {
+          text-decoration: none;
+          color: black;
+  }
+
+/* +++++++++++++++ ABOUT US +++++++++++++++++++++++ */
+
+.about-container h1{
+  font-family: 'Times New Roman', Times, serif;
+  padding: 10px;
+}
+
+.about-container, p {
+  padding: 10px;
+  font-size: medium;
+  font-family: 'Times New Roman', Times, serif;  
+}
+
+.about-container{
+  margin-top: 20px;
+  border-radius: 20px;
+  background-color: #BCCEF8;
+}
+
+/* +++++++++++++++ REGISTRATION FORM +++++++++++++++++++++++ */
+
+.register_form {
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.register_form label{
+  font-size: large;
+  line-height: 40px;
+}
+

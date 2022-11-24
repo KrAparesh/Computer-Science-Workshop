@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Assignment 3 | Question 9</title>
+
+    <script>
+      var myCookie = document.cookie;
+      var test="";
+      var current_score_user = 0;
+      var current_score_rooster = 0;
+      var highest_score_user = 0;
+      var highest_score_rooster = 0;
+
+      $(document).ready(() => {
+        $(".curr-score-user").text(current_score_user);
+        $(".high-score-user").text(highest_score_user);
+        $(".curr-score-rooster").text(current_score_rooster);
+        $(".high-score-rooster").text(current_score_rooster);
+
+        if (document.cookie.length == 0) {
+          $("#btn-submit").click(() => {
+            var name = $(".name-inp").val();
+            document.cookie =
+              "rockmaina_username=" +
+              name +
+              ";rockmania_highest_score_user=" +
+              highest_score_user +
+              "; rockmaina_highest_score_rooster=" +
+              highest_score_rooster +
+              "; ";
+            console.log("Cookie saved: " + myCookie);
+            location.reload(true);
+          });
+        } else {
+          console.log(document.cookie);
+          $(".inp-bar").css({ display: "none" });
+          $(".body-div h1").text("Hi " + getCookie("rockmaina_username") + "!");
+          $("#btn-begin").removeClass("dp_none");
+        }
+
+        $("#btn-begin").click(() => {
+            $(".landing-page").addClass("dp_none");
+            $(".game-body-div").removeClass("dp_none");
+        })
+
+        $(".btn-roll").click(() => {
+          if (myCookie.length != 0) {
+            highest_score_user = getCookie("rockmania_highest_score_user");
+            highest_score_rooster = getCookie("rockmania_highest_score_rooster");
+            console.log("Fetched data from cookie");
+          } else {
+            console.log("Error");
+          }
+          console.log(
+            "logging highest score: " +
+              getCookie("rockmania_highest_score_user")
+          );
+          let usr_choice = Math.floor(1 + Math.random() * 3);
+          let pc_choice = Math.floor(1 + Math.random() * 3);
+
+          $("#user-img").attr(
+            "src",
+            "./Components/images/img-" + usr_choice + ".png"
+          );
+          $("#rooster-img").attr(
+            "src",
+            "./Components/images/img-" + pc_choice + ".png"
+          );
+
+          if (
+            (usr_choice == 1 && pc_choice == 3) ||
+            (usr_choice == 2 && pc_choice == 3) ||
+            (usr_choice == 3 && pc_choice == 1)
+          ) {
+            current_score_user++;
+            if (highest_score_user < current_score_user) highest_score_user++;
+            myCookie =
+              "rockmaina_username=" +
+              name +
+              ";rockmania_current_score_user=" +
+              current_score_user +
+              ";rockmania_current_score_rooster=" +
+              current_score_rooster +
+              ";rockmania_highest_score_user=" +
+              highest_score_user +
+              ";rockmaina_highest_score_rooster=" +
+              highest_score_rooster +
+              ";";
+          }
+
+          if (
+            (usr_choice == 1 && pc_choice == 2) ||
+            (usr_choice == 2 && pc_choice == 1) ||
+            (usr_choice == 3 && pc_choice == 2)
+          ) {
+            current_score_rooster++;
+            if (highest_score_user < current_score_rooster)
+              highest_score_rooster++;
+            myCookie =
+              "rockmaina_username=" +
+              name +
+              ";rockmania_current_score_user=" +
+              current_score_user +
+              ";rockmania_current_score_rooster=" +
+              current_score_rooster +
+              ";rockmania_highest_score_user=" +
+              highest_score_user +
+              ";rockmaina_highest_score_rooster=" +
+              highest_score_rooster +
+              ";";
+          }
+
+          console.log(myCookie);
+          $(".curr-score-user").text(current_score_user);
+          $(".high-score-user").text(highest_score_user);
+          $(".curr-score-rooster").text(current_score_rooster);
+          $(".high-score-rooster").text(current_score_rooster);
+        });
+      });
+
+      function getCookie(cname) {
+        let curr_name = cname + "=";
+        let ca = myCookie.split(";");
+        for (let i = 0; i < ca.length; i++) {
+          let c = ca[i];
+          while (c.charAt(0) == " ") {
+            c = c.substring(1);
+          }
+          if (c.indexOf(curr_name) == 0) {
+            return c.substring(curr_name.length, c.length);
+          }
+        }
+        return "";
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="header">
+      <h1>Rock-Mania</h1>
+    </div>
+    <div class="body-div landing-page">
+      <h1>Hi!</h1>
+      <div class="inp-bar">
+        <input class="name-inp" type="text" placeholder="Enter your name" />
+        <button id="btn-submit" class="btn" type="submit">Go</button>
+      </div>
+      <div class="begin-div">
+        <button id="btn-begin" class="btn dp_none">Begin</button>
+      </div>
+    </div>
+    <div class="game-body-div dp_none">
+      <div class="name-header-div">
+        <div class="user-div">
+          <h1>Ap</h1>
+          <img
+            id="user-img"
+            src="./Components/images/user_profile.png"
+            alt=""
+            style="width: 90px"
+          />
+        </div>
+        <div class="vs">
+          <h2>vS</h2>
+        </div>
+        <div class="rooster-div">
+          <h1>Rooster</h1>
+          <img
+            id="rooster-img"
+            src="./Components/images/Rooster.jpg"
+            alt=""
+            style="width: 90px; border-radius: 100%"
+          />
+        </div>
+      </div>
+
+      <div class="roll-btn-div">
+        <button class="btn btn-roll">Roll</button>
+      </div>
+
+      <div class="score-div-container">
+        <div class="score-div">
+          <table>
+            <thead>
+              <th>Player</th>
+              <th>Current</th>
+              <th>Highest</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="score-card-username">Ap</td>
+                <td class="curr-score-user">8</td>
+                <td class="high-score-user">16</td>
+              </tr>
+              <tr>
+                <td>Rooster</td>
+                <td class="curr-score-rooster">9</td>
+                <td class="high-score-rooster">12</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

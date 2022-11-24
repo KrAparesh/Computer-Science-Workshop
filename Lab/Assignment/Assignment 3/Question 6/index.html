@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Assignment 3 | Question 6</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script>
+        var count = 3;
+        $(document).ready(() => {
+            $(".btn-add-row").click(() => {
+                count++;
+                $("tbody").append("<tr id="+count+"><td>"+count+"</td><td>New Name</td><td>Regd. No</td></tr>");
+            });
+
+            $(".btn-change-color").click(() => {
+                $(".custom-table thead tr, .btn").css({"background-color": "#A4BE7B"});
+                // $(".tr:last-child").css({"border-bottom": "2px solid #A4BE7B"});
+                $(".custom-table tbody tr:last-child").css({"border-bottom":"2px solid #A4BE7B"});
+            });
+
+            $(".btn-rem-content").click(() => {
+                $("#"+$("#user_inp").val()).empty();
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="controls">
+            <button class="btn btn-add-row">Add Row</button>
+            <button class="btn btn-change-color">Change Color</button>
+            <div class="wrapper">
+                <input type="text" name="" id="user_inp" placeholder="Enter text to remove">
+                <button class="btn btn-rem-content" type="submit">Remove</button>
+            </div>
+        </div>
+        <div class="data-table">
+            <table class="custom-table">
+                <thead>
+                    <tr>
+                        <th>Sl No.</th>
+                        <th>Name</th>
+                        <th>Registration No.</th>
+                    </tr>
+            </thead>
+            <tbody>
+                <tr id="1">
+                    <td>1</td>
+                    <td>Aparesh Kr</td>
+                    <td>2141011100</td>
+                </tr>
+                <tr id="2">
+                    <td>2</td>
+                    <td>Tushar Saini</td>
+                    <td>2141042563</td>
+                </tr>
+                <tr id="3">
+                    <td>3</td>
+                    <td>Sameer Kr</td>
+                    <td>2141089427</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+
+</html>

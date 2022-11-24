@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.playground {
+    height: 70%;
+    width: 100%;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.opts {
+    padding: 20px;
+    height: 25%;
+    /* width: 100%; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #B3FFAE;
+}
+
+.btn {
+    flex-basis: 30%;
+    background-color: #F8FFDB;
+    box-shadow: 2px 4px 10px 1px rgba(200, 200, 200, 0.44);
+    border-radius: 8px;
+    border: none;
+    font-size: large;
+    color: #333;
+    font-family: Arial;
+    cursor: pointer;
+    opacity: 75%;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    transition: 150ms;
+    opacity: 90%;
+}
+
+/* Playground Box */
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: #B3FFAE;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 4px 10px 1px rgba(200, 200, 200, 0.44);
+    overflow: hidden;
+}
+
+h1 {
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}

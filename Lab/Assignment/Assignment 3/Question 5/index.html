@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3 | Question 5</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    
+    <script>
+        $(document).ready(() => {
+            $(".btn-slideDown").click(() => $(".box").slideUp("slow"));
+            $(".btn-animate").click(() => $(".box").animate({height: "100%", width: "100%"}));
+            $(".btn-fadeIn").click(() => $(".box").fadeIn());
+            $(".btn-hide").click(() => $(".box").hide("slow"));
+            $(".btn-show").click(() => $(".box").show());
+            $(".btn-mouseenter").mouseenter(() => $(".box").css({"background-color":"#f4f4f4"}));
+            $(".btn-mouseenter").mouseleave(() => $(".box").css({"background-color":"#B3FFAE"}));
+            $(".btn-attr").click(() => $(".box").attr());
+            $(".btn-html").click(() => alert($(".box").html()));        
+        });
+    </script>
+</head>
+<body>
+    <div class="playground">
+        <div class="box">
+            <h1>Hi</h1>
+        </div>
+    </div>
+    <div class="opts">
+        <button class="btn btn-slideDown">Slide Down</button>
+        <button class="btn btn-animate">Animate</button>
+        <button class="btn btn-fadeIn">Fade-In</button>
+        <button class="btn btn-hide">Hide</button>
+        <button class="btn btn-show">Show</button>
+        <button class="btn btn-mouseenter">Hover on me</button>
+        <button class="btn btn-attr">Attribute</button>
+        <button class="btn btn-html">HTML</button>
+    </div>
+</body>
+</html>

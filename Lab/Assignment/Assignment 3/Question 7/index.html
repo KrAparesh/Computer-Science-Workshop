@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Montserrat:wght@900&family=Ubuntu:ital@0;1&display=swap" rel="stylesheet">
+    <title>Assignment 3 | Question 7</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            $(".rgstr-btn").click(() => {
+                if(($("#name-inp").val().length === 0)){
+                    $("#name-inp").css({"border": "2px solid red"})
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="form-div">
+            <div class="header"><h1><span id="spn-style">Re</span>gistration</h1></div>
+            <form>
+                <div class="user-info">
+                    <div class="name-div">
+                        <i class="fa-regular fa-user fa-xl"></i>
+                        <input class="inp-bar" type="text" id="name-inp" placeholder="Enter your name" required>
+                    </div>
+                    <div class="name-div">
+                        <i class="fa-regular fa-envelope fa-xl"></i>
+                        <input class="inp-bar" type="email" name="email-inp" id="email-inp" placeholder="Enter your email" required>
+                    </div>
+                    <div class="name-div">
+                        <i class="fa-solid fa-lock fa-xl"></i>
+                        <input class="inp-bar" type="password" name="pass-inp" id="pass-inp" placeholder="Create a password" required>
+                    </div>
+                    <div class="name-div">
+                        <i class="fa-solid fa-lock fa-xl"></i>
+                        <input class="inp-bar" type="password" name="pass-inp-cnf" id="pass-inp-cnf" placeholder="Confirm the password" required>
+                    </div>
+                </div>
+                <div class="terms">
+                    <input type="checkbox" label="inp-checkbox" required>
+                    <label for="inp-checkbox">I accept all terms & conditions</label>
+                </div>
+                <div class="footer">
+                    <button class="rgstr-btn"type="submit">Register Now</button>
+                    <p>Already have an account? <b>Login now</b></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

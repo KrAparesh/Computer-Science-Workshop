@@ -1,0 +1,16 @@
+Paper   Stone   Scissor
+1       2       3
+
+USER vS PC
+
+1 v 1 = Draw
+1 v 2 = LOST
+1 v 3 = WON
+
+2 v 1 = LOST
+2 v 2 = Draw
+2 v 3 = WON
+
+3 v 1 = WON
+3 v 2 = LOST
+3 v 3 = DRAW
