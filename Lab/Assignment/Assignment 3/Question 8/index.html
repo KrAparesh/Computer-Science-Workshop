@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Assignment 3 | Question 8</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Montserrat:wght@900&family=Ubuntu:ital@0;1&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Montserrat:wght@900&family=Ubuntu:ital@0;1&display=swap"
+        rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script>
         var job_category = ["DevOps", "Full-Stack", "UX-Engineer"];
         $(document).ready(() => {
-            for(var job_count = 2; job_count <= 100; job_count++){
+            for (var job_count = 2; job_count <= 100; job_count++) {
                 var job_title = job_category[(Math.floor(Math.random() * 3))];
-                $(".job-container").append("<div class=\"job "+job_title+"\""+job_category[(Math.floor(Math.random() * 3))]+"\"><h2>Job Title "+job_count+"</h2><p class=\"description\"> Category: "+job_title+"</p><p class=\"description\">Job description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia animi eaque, saepe ducimus, iusto eius maiores atque doloremque cum optio voluptatem sint laboriosam! Est at hic iure magni, iusto deserunt.</p><p class=\"salary\">Salary: $ XXXX - $YYYYY</p></div>");
+                $(".job-container").append("<div class=\"job " + job_title + "\"" + job_category[(Math.floor(Math.random() * 3))] + "\"><h2>Job Title " + job_count + "</h2><p class=\"description\"> Category: " + job_title + "</p><p class=\"description\">Job description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia animi eaque, saepe ducimus, iusto eius maiores atque doloremque cum optio voluptatem sint laboriosam! Est at hic iure magni, iusto deserunt.</p><p class=\"salary\">Salary: $ XXXX - $YYYYY</p></div>");
             }
             $("#btn-devops").click(() => {
                 $(".DevOps").show("slow");
@@ -35,6 +38,7 @@
     </script>
 
 </head>
+
 <body>
     <div class="navbar">
         <div class="logo">
@@ -57,9 +61,12 @@
         <div class="job DevOps">
             <h2>Job Title 1</h2>
             <p class="description"> Category: DevOps</p>
-            <p class="description">Job description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia animi eaque, saepe ducimus, iusto eius maiores atque doloremque cum optio voluptatem sint laboriosam! Est at hic iure magni, iusto deserunt.</p>
+            <p class="description">Job description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+                animi eaque, saepe ducimus, iusto eius maiores atque doloremque cum optio voluptatem sint laboriosam!
+                Est at hic iure magni, iusto deserunt.</p>
             <p class="salary">Salary: $ XXXX - $YYYYY</p>
         </div>
     </div>
-    </body>
+</body>
+
 </html>

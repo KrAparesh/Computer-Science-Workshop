@@ -16,6 +16,10 @@ body, html {
     justify-content: center;
 }
 
+.register-btn:hover{
+    cursor: pointer;
+}
+
 .register-btn {
     width: 20%;
     height: 20%;

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+</head>
+<body>
+  <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+  <canvas id="myChart1" style="width:100%;max-width:600px"></canvas>
+    
+    
+</body>
+<script>
+    var xValues = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+    var yValues = [25, 23, 22, 24, 15, 11, 22];
+    var barColors = ["red", "green","blue","orange","brown","purple","pink"];
+
+    new Chart("myChart", {
+      type: "bar",
+      data: {
+        labels: xValues,
+        datasets: [{
+          backgroundColor: barColors,
+          data: yValues
+        }]
+      },
+      options: {
+        legend: {display: false},
+        title: {
+          display: true,
+          text: "Weather Data"
+        }
+      }
+    });
+    
+
+    new Chart("myChart1", {
+      type: "pie",
+      data: {
+        labels: xValues,
+        datasets: [{
+          backgroundColor: barColors,
+          data: yValues
+        }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: "Weather Data"
+        }
+      }
+    }); 
+    </script>
+</html>
+
